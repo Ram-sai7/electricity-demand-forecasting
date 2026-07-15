@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large/raw data
+data/raw/*.csv
+data/interim/*
+data/processed/*
+
+# Keep folders
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Model objects
+outputs/model_objects/*
+!outputs/model_objects/.gitkeep
+
+# TensorFlow
+*.keras
+*.h5
+logs/
+
+# Secrets
+.env
