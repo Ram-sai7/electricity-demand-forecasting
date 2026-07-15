@@ -4,7 +4,6 @@ Time-series forecasting project for German electricity demand using statistical,
 
 This project was completed as part of an MSc Data Science forecasting assignment and investigates whether advanced forecasting methods provide meaningful improvements over traditional benchmark models.
 
----
 
 ## Project Objectives
 
@@ -17,8 +16,6 @@ The main objectives of this project are:
 - Assess the value of weather variables as exogenous regressors.
 - Evaluate whether machine learning and deep learning models justify their additional complexity.
 - Recommend an operational forecasting approach.
-
----
 
 ## Dataset
 
@@ -65,8 +62,6 @@ Target variable:
 load_gw
 ```
 
----
-
 ### Temperature Data
 
 Source: Open-Meteo Historical Weather API
@@ -91,8 +86,6 @@ cooling_degree_days
 
 Observed temperatures were used during the test period. Therefore, SARIMAX results should be interpreted as conditional or explanatory forecasts rather than fully operational forecasts.
 
----
-
 ## Methodology
 
 ### Part 1 – Exploratory Data Analysis
@@ -109,8 +102,6 @@ The following analyses were performed:
 - First differencing
 - Seasonal differencing
 
----
-
 ### Part 2 – Benchmark Forecasting Models
 
 The following benchmark models were implemented:
@@ -125,8 +116,6 @@ Forecast horizon:
 ```text
 104 weeks (2 years)
 ```
-
----
 
 ### Part 3 – SARIMA
 
@@ -152,8 +141,6 @@ Residual diagnostics included:
 - Residual ACF
 - Ljung-Box test
 
----
-
 ### Part 4 – SARIMAX
 
 Temperature variables were incorporated as exogenous regressors.
@@ -171,8 +158,6 @@ Forecast intervals included:
 - 80% confidence interval
 - 95% confidence interval
 
----
-
 ### Part 5 – Machine Learning Models
 
 Feature engineering included:
@@ -188,8 +173,6 @@ Models evaluated:
 
 - Random Forest Regressor
 - Gradient Boosting Regressor
-
----
 
 ### Part 6 – Deep Learning
 
@@ -209,8 +192,6 @@ Key design choices included:
 - Recursive multi-step forecasting
 
 The final hourly forecasts were aggregated to weekly values for comparison with the other models.
-
----
 
 ## Evaluation Metrics
 
@@ -249,8 +230,6 @@ The Seasonal Naive Forecast was used as the primary benchmark.
 - Random Forest achieved the best overall forecasting performance.
 - LSTM performance deteriorated over a two-year recursive forecasting horizon.
 - Random Forest provides the best balance of accuracy, interpretability, and maintainability.
-
----
 
 ## Repository Structure
 
@@ -302,8 +281,6 @@ electricity-demand-forecasting/
 └── README.md
 ```
 
----
-
 ## Installation
 
 Clone the repository:
@@ -343,8 +320,6 @@ Install the local package:
 pip install -e .
 ```
 
----
-
 ## Running the Project
 
 ### Download the Data
@@ -373,8 +348,6 @@ This step may take several hours because it evaluates many SARIMA parameter comb
 python scripts/run_pipeline.py
 ```
 
----
-
 ## Generated Outputs
 
 ### Forecast Files
@@ -397,9 +370,6 @@ outputs/figures/forecast_comparison.png
 outputs/figures/LSTM.png
 outputs/figures/2yrs.png
 outputs/figures/temp.png
-```
-
----
 
 ## Testing
 
@@ -415,8 +385,6 @@ The tests check:
 - Evaluation metrics
 - Lag feature construction
 - Protection against future-value leakage
-
----
 
 ## Report
 
@@ -439,8 +407,6 @@ The report includes:
 - Limitations
 - Conclusion
 
----
-
 ## Main Limitations
 
 - The SARIMA grid search is computationally expensive.
@@ -451,7 +417,6 @@ The report includes:
 - Recursive LSTM forecasting accumulated error over the long forecast horizon.
 - Random Forest does not produce prediction intervals directly.
 
----
 
 ## Recommended Model
 
@@ -463,8 +428,6 @@ Random Forest is recommended for this forecasting task because it achieved the l
 - Ease of maintenance
 
 Gradient Boosting also performed strongly and produced similar results.
-
----
 
 ## Author
 
