@@ -241,6 +241,9 @@ electricity-demand-forecasting/
 │   ├── interim/
 │   └── processed/
 │
+├── notebooks/
+│   └── Electricity_Demand_Forecasting.ipynb
+│
 ├── outputs/
 │   ├── figures/
 │   ├── forecasts/
@@ -248,6 +251,7 @@ electricity-demand-forecasting/
 │   └── model_objects/
 │
 ├── reports/
+│   └── Electricity_Demand_Forecasting_Report.pdf
 │
 ├── scripts/
 │   ├── download_data.py
@@ -257,6 +261,7 @@ electricity-demand-forecasting/
 │
 ├── src/
 │   └── electricity_demand/
+│       ├── __init__.py
 │       ├── config.py
 │       ├── data.py
 │       ├── evaluation.py
@@ -264,6 +269,7 @@ electricity-demand-forecasting/
 │       ├── pipeline.py
 │       ├── plotting.py
 │       └── models/
+│           ├── __init__.py
 │           ├── benchmarks.py
 │           ├── feature_models.py
 │           ├── neural.py
@@ -275,10 +281,10 @@ electricity-demand-forecasting/
 │   ├── test_evaluation.py
 │   └── test_features.py
 │
-├── requirements.txt
-├── pyproject.toml
 ├── .gitignore
-└── README.md
+├── README.md
+├── pyproject.toml
+└── requirements.txt
 ```
 
 ## Installation
